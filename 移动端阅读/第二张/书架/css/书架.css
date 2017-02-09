@@ -1,0 +1,269 @@
+@import url(1.css);
+p,h1,h2,h3,h4,h5,h6,pre,input,dd,ul,dt,dl,ol,figure,body,input,article{
+    margin: 0;padding: 0;list-style: none;border: none;}
+img{border: none;display: block;margin: 0;padding: 0;}
+input,a{text-decoration: none;}
+body{/*font-size: 12px;*/font-family:"Helvetica Neue","Helvetica";background: #fafafa;position: relative;}
+*{box-sizing: border-box;}
+/*顶部*/
+.top{
+     width: 100%;height: 1.4rem;
+     background: #29a6dc;padding-top:0.6rem;
+     margin-bottom: 0.58rem;position: relative; 
+  }
+ .shujia{
+     height: 0.34rem;text-align: center;font-size: 0.34rem;
+     color: #fff;line-height: 0.34rem;margin-bottom: 0.06rem;
+  }
+ .dabai{
+    width: 0.34rem;height: 0.03rem;
+    margin: 0 auto;position: relative;
+    margin-bottom: 0.05rem;
+ }
+ .gan{
+    width: 0.32rem;height: 0.01rem;
+    background:#fff;margin: 0 auto;
+    margin-top: 0.01rem;position: absolute;left:0.01rem;
+ }
+ .yuan1{
+    width: 0.03rem;height: 0.03rem;
+    border-radius: 0.015rem;
+    position: absolute;top:0;left:0;
+    background: #fff;
+ }
+ .yuan2{
+    width: 0.03rem;height: 0.03rem;
+    border-radius: 0.015rem;
+    position: absolute;top:0;right:0;
+    background: #fff;
+ }
+ .yingwen{
+    height: 0.16rem;margin: 0 auto;
+    font-size: 0.14rem;text-align: center;
+    color: #a3e3ff;
+ }
+ .sousuotu{
+    width: 0.44rem;height: 0.44rem;
+    background:url(../images/10.png) no-repeat;
+    background-size: cover;
+    position: absolute;top:0.68rem;right: 0.24rem;
+ }
+ /*中部内容*/
+ .dibukuang{
+    width: 7.04rem;height: 2.88rem;
+    margin: 0 auto;background: url(../images/1.png) no-repeat left bottom;
+    border: 0.02rem solid #fff;border-radius: 0.1rem;
+    background-size: 7.22rem 3.49rem;box-shadow: 0.1rem 0.1rem 0.05rem #000 0.3rem;
+ }
+ .shangbukuang{
+    width: 6.67rem;height: 3.21rem;
+    margin: 0 auto;background: url(../images/2.png) no-repeat left bottom;
+    border: 0.02rem solid #fff;border-radius: 0.1rem;
+    background-size: 6.67rem 3.22rem;z-index: 99;
+    position: absolute;top: 1.82rem;left: 0.42rem;box-shadow: 0.1rem 0.1rem 0.05rem #000 0.3rem;
+ }
+ .yindaoqiu{
+    width: 0.47rem;height: 0.08rem;
+    margin: 0 auto;margin-top: 0.21rem;
+ }
+ .yuan21{
+    width: 0.08rem;height: 0.08rem;
+    border-radius: 0.04rem;float: left;
+    background: #3fabfe;border: 0.01rem solid #3fabfe;
+ }
+ .yuan22{
+    width: 0.08rem;height: 0.08rem;
+    border-radius: 0.04rem;float: left;
+    border: 0.01rem solid #3fabfe;
+    background: #fff;margin-left: 0.11rem;
+ }
+ .yuan23{
+    width: 0.08rem;height: 0.08rem;
+    border-radius: 0.04rem;float: right;
+    border: 0.01rem solid #3fabfe;
+    background: #fff;
+ }
+ .zuixin{
+    width: 2rem;height: 0.63rem;
+    margin-left: 0.37rem;margin-top: 0.21rem;
+    background: red;background: url(../images/3.png) no-repeat 0.01rem 0.06rem;
+    background-size: 0.3rem 0.3rem;
+ }
+ .zxsj{
+    width:1.53rem;height: 0.32rem;
+    margin-left: 0.47rem;margin-top: 0.05rem;
+    font-size: 0.28rem; /*float: right;*/position: relative;
+ }
+ .hong{
+    width: 0.02rem;height: 0.02rem;
+    background: #fe58aa;float: right;
+    position: absolute;bottom:0.02rem;right: 0.19rem;
+ }
+ .lv{
+    width: 0.02rem;height: 0.02rem;
+    background: #58fedd;float: right;
+    position: absolute;bottom:0.02rem;right: 0.12rem;
+ }
+ .huang{
+    width: 0.02rem;height: 0.02rem;
+    background: #ffc63e;float: right;
+    position: absolute;bottom:0.02rem;right: 0.05rem;
+ }
+ .xiazi{
+    width:1.53rem;height: 0.31rem;font-size: 0.14rem;
+    margin-left: 0.47rem;/*margin-top: 0.05rem;*/
+    line-height: 0.31rem;color: #666666;
+ }
+ .maokuang{
+    width: 100%;height: 3.6rem;
+     margin-top: 0.28rem;margin-bottom: 0.26rem;
+ }
+ .mao{
+    width: 2.5rem;height: 3.6rem;
+   margin-left: 0.26rem;float: left;
+    background: #ffffff;border-radius: 0.1rem;
+ }
+ .maotu{
+    width: 2.11rem;height: 2.82rem;border-radius: 0.1rem;margin: 0 auto;
+    margin-top: 0.03rem;border-left: 0.01rem solid #fff;
+    border-right: 0.01rem solid #fff;border-top: 0.02rem solid #fff;
+    border-bottom: 0.02rem solid #fff;
+    background: url(../images/4.png) no-repeat;
+    background-size: 2.09rem 2.78rem;margin-bottom: 0.04rem;
+ }
+ .renming{
+    height: 0.22rem;text-align: center;margin: 0 auto;
+    font-size: 0.22rem;color: #333333; 
+ }
+ .fanyi{
+    height: 0.12rem;text-align: center;margin: 0 auto;
+    font-size: 0.12rem;color: #999999;margin-top: 0.06rem; 
+ }
+ .mao2{
+    width: 2.5rem;height: 3.6rem;
+    margin-left: 0.26rem;float: left;
+    background: #ffffff;border-radius: 0.1rem;
+ }
+ .maotu2{
+    width: 2.11rem;height: 2.82rem;border-radius: 0.1rem;margin: 0 auto;
+    margin-top: 0.03rem;border-left: 0.01rem solid #fff;
+    border-right: 0.01rem solid #fff;border-top: 0.02rem solid #fff;
+    border-bottom: 0.02rem solid #fff;
+    background: url(../images/4.png) no-repeat;
+    background-size: 2.09rem 2.78rem;margin-bottom: 0.04rem;
+ }
+ .renming2{
+    height: 0.22rem;text-align: center;margin: 0 auto;
+    font-size: 0.22rem;color: #333333; 
+ }
+ .fanyi2{
+    height: 0.12rem;text-align: center;margin: 0 auto;
+    font-size: 0.12rem;color: #999999; margin-top: 0.06rem;
+ }
+ .zuixin2{
+    width: 2rem;height: 0.63rem;
+    margin-left: 0.37rem;margin-top: 0.21rem;
+    background: url(../images/5.png) no-repeat 0.01rem 0.06rem;
+    background-size: 0.3rem 0.3rem;
+ }
+ .yuedukuang{
+    width: 7.02rem;height: 2.21rem;margin: 0 auto;
+    border-radius: 0.1rem;background:#ffffff;
+    position: relative;margin-bottom: 0.16rem;
+ }
+ .book{
+    width: 1.38rem;height: 1.99rem;
+    margin-left: 0.13rem;margin-top: 0.11rem;
+    background: url(../images/6.png) no-repeat;
+    background-size: cover;float: left;
+ }
+ .jieshao{
+    width: 5.21rem;height: 1.95rem;
+    margin-top: 0.16rem;margin-left: 0.2rem;
+    float: left;
+ }
+ .zi1{
+    height: 0.26rem;font-size: 0.26rem;
+    color: #333333;
+ }
+ .zi2{
+    height: 0.35rem;font-size: 0.12rem;
+    color: #999999;line-height: 0.35rem;   
+ }
+ .xuxian{
+    width:3.38rem;height: 0.01rem;
+    border-top: 0.01rem dashed #333333;
+ }
+ .zi3{
+    height: 0.49rem;font-size: 0.18rem;
+    color: #666666;line-height: 0.49rem;
+ }
+ .zi4{
+    height: 0.14rem;font-size: 0.14rem;
+    color: #666666;line-height: 0.14rem;
+ }
+ .zi5{
+    height: 0.23rem;font-size: 0.14rem;
+    color: #666666;text-align: bottom;
+ }
+ .jindutiao{
+    width: 2.7rem;height:0.14rem;margin-top: 0.23rem;
+ }
+ .zi6{
+    width:0.78rem;height: 0.14rem;font-size: 0.14rem;
+    color: #666666;float: left;
+ }
+ .zi6 span{
+    color: #39bbeb;
+ }
+ .jindutiao progress{
+    width: 1.70rem;height: 0.06rem;
+    margin-top: 0.06rem;
+    position: absolute;top: 1.9rem;left: 2.73rem;
+ }
+ .anniu input{
+    width: 1.51rem;height: 0.44rem;color: #fff;
+    position: absolute;bottom: 0.1rem;right: 0.1rem;
+    border-radius: 0.22rem;background: #29a5db;
+    border: none;font-size: 0.2rem;
+ }
+ /*底部内容*/
+ .dilan{
+    height: 1rem;margin-top: 0.13rem;
+    background: #151c2b;
+ }
+ .shujia2{
+    width: 2.5rem;height: 0.95rem;border-right: 0.01rem solid #717171;
+    margin-top: 0.02rem;float: left;
+ }
+ .shujiatu{
+    width: 0.46rem;height: 0.44rem;
+    background: url(../images/7.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }
+ .shujiazi{
+    width:0.48rem;height: 0.3rem;/*text-align: 0.44rem;*/font-size: 0.22rem;
+    line-height: center;color: #ffffff;margin: 0 auto; margin-top: 0.1rem;
+ }
+ .shuchengtu{
+    width: 0.44rem;height: 0.44rem;
+    background: url(../images/8.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }
+ .shujia2  .shuchengzi{
+    width:0.48rem;height: 0.30rem;text-align: 0.44rem;font-size: 0.22rem;
+    line-height: center;color: #67686a;margin: 0 auto; margin-top: 0.1rem;
+ }
+ .shujia22{
+    width: 2.5rem;height: 0.95rem;
+    margin-top: 0.02rem;float: left;
+ }
+ .shujia22 .wodezi{
+    width:0.48rem;height: 0.30rem;text-align: 0.44rem;font-size: 0.22rem;
+    line-height: center;color: #67686a;margin: 0 auto; margin-top: 0.08rem;
+ }
+ .wodetu{
+    width: 0.44rem;height: 0.46rem;
+    background: url(../images/9.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }

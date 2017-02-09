@@ -31,8 +31,8 @@ body{font-size: 14px;font-family:微软雅黑;margin: 0 0;}
 .word7:hover{background: url(../images/2.png) no-repeat;background-size: contain;
 	width: 30px;height: 30px;margin:5px auto;margin-left:55px; }
   /*banner*/
-.ju1{width: 1423px;height: 939px;background: url(../images/3.png) no-repeat ;
-	background-size:1423px 953px;margin: 0 auto;margin-top: 53px;}
+.ju1{width:  100%;height: 939px;background: url(../images/3.png) no-repeat ;
+	background-size: 100% 953px;margin: 0 auto;margin-top: 53px;}
 	/*内容*/
 .nr1{width: 1200px;height: 607px;margin: 0 auto;margin-top: 139px;background: 
 	url(../images/4.png) no-repeat;}
