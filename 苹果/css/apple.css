@@ -7,7 +7,7 @@ body{font-size: 14px;font-family:"Myriad Set Pro","Helvetica Neue","Helvetica","
 *{box-sizing: border-box}
           /*顶部*/
 .topkuang{width: 100%;height: 39px;background: #444444;}
-.topkuang2{width: 985px;height: 39px;margin: 0 auto;}
+.topkuang2{width: 100%;height: 39px;margin: 0 auto;}
 .guanggao{width: 42px;height: 39px;float:right;margin-right: 5px;line-height: 39px;text-align: center;color:#8c8c8e;font-size: 12px;}
           /*nav*/
 /*.topkuang3{width: 100%;height: 39px;background: #000;}
@@ -54,7 +54,7 @@ body{font-size: 14px;font-family:"Myriad Set Pro","Helvetica Neue","Helvetica","
  @media screen and (max-width: 735px){.topkuang4{width:100%;padding: 0 12px;} .wen {display: none} .tu2{display: none} .topkuang4 .tu4{display: inline-block;}}
 
          /*banner部分*/
-         .bannerk{width: 100%;height: 513px;margin: 0 auto;overflow: hidden;position: relative;position: relative;}
+.bannerk{width: 100%;height: 513px;margin: 0 auto;overflow: hidden;position: relative;position: relative;}
 .bannerk a{ display: block;width: 100%;height: 100%;}
 .banner-litle{width: 100%;height: 125px;padding-top: 32px;}
 .banner-litle .tu{width: 100%;height: 24px;background: url(../images/tu.png)no-repeat center bottom;background-size: auto 100%;}
@@ -76,7 +76,7 @@ body{font-size: 14px;font-family:"Myriad Set Pro","Helvetica Neue","Helvetica","
 /*.bannerk{width: 100%px;height: 513px;margin: 0 auto;background:url(../images/banner.jpg);background-size:100% 100%;}*/
          /*-----产品展示----*/
 .box{
-    width:100%;
+    width:auto;
     border:1px solid white;
 }
 .box:after{content:"";clear:both;
@@ -121,7 +121,7 @@ display:block;  }
         width:100%;background: url(../images/s4.png) no-repeat;background-size: 100% 200px;
         float:left;}}
             /*底部*/
-  .footer{width: 100%;background:#f2f2f2;height:auto ;font-size: 10px}
+.footer{width: 100%;background:#f2f2f2;height:auto ;font-size: 10px}
 
 .shexiangtou{height: 68px;width: 980px;border-bottom: 1px solid #e3e3e3;color:#999;line-height: 68px;text-align: left;font-size: 10px;float: left;margin-left: 185px;margin-bottom: 24px}
 .jingou{height:auto;width:980px;margin: 0 auto}
