@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑酷</title>
+    <script src="hitPix.js"></script>
+    <style>
+        canvas{
+            background: url(image/1.jpg);
+            background-size: auto 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<canvas width="800px" height="400px"></canvas>
+<img src="image/s1.png" alt="" hidden class="s">
+<img src="image/s2.png" alt="" hidden class="s">
+<img src="image/s3.png" alt="" hidden class="s">
+<img src="image/p1.png" alt="" hidden class="p">
+<img src="image/p2.png" alt="" hidden class="p">
+<img src="image/p3.png" alt="" hidden class="p">
+<img src="image/p4.png" alt="" hidden class="p">
+<img src="image/p5.png" alt="" hidden class="p">
+<img src="image/p6.png" alt="" hidden class="p">
+<img src="image/p7.png" alt="" hidden class="p">
+<img src="image/p8.png" alt="" hidden class="p">
+<img src="image/p9.png" alt="" hidden class="p">
+<img src="image/p10.png" alt="" hidden class="p">
+<img src="image/p11.png" alt="" hidden class="p">
+<img src="image/p12.png" alt="" hidden class="p">
+</body>
+<script>
+    var canvas=document.querySelector("canvas");
+    function Obstacle(canvas,num) {
+        this.canvas=canvas;
+        this.cobj=canvas.getContext("2d");
+        this.images=document.querySelectorAll(".s");
+        this.x=canvas.width;
+        this.y=270;
+        this.width=100;
+        this.height=100;
+        this.num=num;
+    }
+    Obstacle.prototype={
+        draw:function () {
+            this.cobj.drawImage(this.images[this.num],0,0,256,256,this.x,270,100,100)
+        },
+        update:function () {
+            this.x-=5;
+            this.draw();
+        }
+    };
+    function Person(canvas) {
+        this.canvas=canvas;
+        this.cobj=canvas.getContext("2d");
+        this.images=document.querySelectorAll(".p");
+        this.state=0;
+        this.val1=35;
+        this.val2=0;
+        this.x=100;
+        this.y=250-this.val2;
+        this.width=110;
+        this.height=110;
+        this.isjump=false;
+        this.jump();
+    }
+    Person.prototype={
+        draw:function () {
+            this.cobj.drawImage(this.images[this.state],100,250-this.val2,110,110)
+        },
+        update:function (num) {
+            //当前的帧数
+            this.state=Math.floor(num/4)%this.images.length;//每四帧改变一次状态
+            if(this.isjump){
+//                this.val2=60;
+                if(num%2==0){
+                    this.val1-=3;
+                    this.val2+=this.val1;
+                    if(this.val2<=0){
+                        this.val1=35;
+                        this.val2=0;
+                        this.isjump=false;
+                    }
+                }
+                this.state=4;
+            }
+            this.draw();
+        },
+        jump:function () {
+            this.canvas.onclick=function () {
+                this.isjump=true;
+            }.bind(this);
+        }
+    };
+    function Game(canvas) {
+        this.canvas=canvas;
+        this.cobj=canvas.getContext("2d");
+        this.frame=0;
+//        this.obstacle=new Obstacle(canvas,0);
+        //
+        this.obstacle=[];
+        this.step=200;
+        this.person=new Person(canvas);
+        this.state="play";
+        //
+    }
+//    new Game(canvas);
+    Game.prototype={
+        updatescene:function () {
+            this.canvas.style.backgroundPosition=-this.frame*5+"px 0";
+        },
+        updateobstacle:function () {
+//            this.obstacle.update();
+//            if(this.obstacle.x<0){
+//                this.obstacle=null;
+//                var num=Math.floor(Math.random()*3);
+//                this.obstacle=new Obstacle(this.canvas,num);
+//            }
+            //
+            if(this.frame==this.step){
+                this.step+=Math.floor(Math.random()*50)+50;
+                var num=Math.floor(Math.random()*3);
+                var obstacle=new Obstacle(this.canvas,num);
+                this.obstacle.push(obstacle);
+                if(this.obstacle.length>4){
+                    this.obstacle[0]=null;
+                    this.obstacle.shift();
+                }
+            }
+            //
+            this.obstacle.forEach(function (v) {
+                v.update();
+                if(hitPix(this.canvas,this.person,v)){
+                    alert("GAME OVER");
+                    this.state="fail";
+                }
+            }.bind(this));
+            //
+        },
+        updateperson:function () {
+            this.person.update(this.frame)
+        },
+        update:function () {
+            if(this.state!="play"){
+                return;
+            }
+            this.frame++;
+            this.cobj.clearRect(0,0,this.canvas.width,this.canvas.height);
+            this.updatescene();
+            this.updateobstacle();
+            this.updateperson();
+            requestAnimationFrame(this.update.bind(this))
+        }
+    };
+    new Game(canvas).update();
+
+</script>
+</html>

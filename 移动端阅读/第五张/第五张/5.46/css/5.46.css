@@ -1,0 +1,69 @@
+html{  font-family:"微软雅黑";font-size:100px;  }
+body,input{
+    margin:0;  padding:0; }
+*{ box-sizing:border-box;}
+a{ text-decoration:none; margin:0;
+    padding:0;display: block;}
+img{ padding:0; margin:0;display: block;}
+@media screen and (max-width:375px){
+    html{ font-size:50px;} }
+@media screen and (max-width:360px){
+    html{font-size:48px;} }
+@media screen and (max-width:320px){
+    html{font-size:42px;} }
+/*头部*/
+header{ width:7.50rem;height:1.40rem;
+    padding-top:0.01rem; background:#29a6dc;
+    margin:0 auto; position:relative;  }
+.header-word{  width:1.30rem;height:0.34rem;
+    line-height:0.34rem; margin:0 auto;
+    margin-top:0.60rem;text-align:center;
+    font-size:0.32rem;color:#f2f2f2;}
+.header-line{width:0.34rem;height:0.03rem;
+    margin:0 auto;margin-top:0.05rem;}
+.header-letter{  width:2.30rem;height:0.15rem;
+    line-height:0.15rem;  font-size:0.14rem;
+    text-align:center;  margin:0 auto;
+    margin-top:0.05rem; color:#9ddffd;}
+.header-a a{ width:0.44rem;
+    height:0.44rem; position:absolute;
+    top:0.68rem;right:0.25rem; }
+.header-aa a{ width:0.44rem;
+    height:0.44rem; position:absolute;
+    top:0.68rem;left:0.25rem; }
+/*内容*/
+section{
+    width: 7.5rem;height: 11.94rem;
+    background-color: #fafafa;margin: 0 auto;
+    padding-top: 0.16rem;
+}
+.app-content{
+    width: 7.02rem;height: 3.24rem;
+    box-shadow:0 0 0.23rem 0.02rem rgba(0, 0, 0, 0.25);border-radius: 0.10rem;
+    margin: 0 auto;padding-left: 0.17rem;
+    padding-top: 0.2rem;
+}
+.bottom-title-image{ width:0.30rem;height:0.62rem;
+    float:left;padding-top: 0.15rem;}
+.bottom-title-word{ width:5.30rem;height:0.62rem;
+    float:left;  margin-left:0.16rem;}
+.bottom-title-word1{  width:5.30rem;height:0.37rem;
+    line-height:0.37rem; }
+.bottom-title-word11{  width:4.20rem;height:0.37rem;
+    font-size:0.26rem; color:#333333;
+    float:left; }
+.bottom-title-word1 img{ float: left;
+    margin-top: 0.25rem;}
+.bottom-title-word2{  width:4.50rem;height:0.25rem;
+    line-height:0.25rem;font-size:0.18rem;
+    color:#939393; }
+.content-button{
+    width:5.64rem;height:0.68rem;
+    margin:0 auto;overflow:hidden;
+    margin-top:0.56rem;position:relative;
+}
+#button{width:5.64rem;height:0.68rem;
+    background:#28dd8b;
+    border-radius:0.34rem;border:none;
+    font-size:0.26rem; color:#fff;
+    cursor:pointer;display:block;}

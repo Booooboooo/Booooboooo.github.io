@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      function Game(m,s,l,st){
+        this.main=m;
+        this.height=m.offsetHeight;
+        this.scorele=s;
+        this.scor=0;
+        this.lifeele=l;
+        this.life=5;
+        this.guanqia=st;
+        this.statenum=1;
+        this.interval=null;
+        this.dir={};  //字典  字母 : {left top ele}
+        this.state=false;
+        this.speed=5;
+      }
+      Game.prototype={
+         // 开始游戏
+         begin:function(){
+             this.state=true;
+             for(var i=0;i<3;i++){
+                 this._createletter();
+             }
+             this._move();
+             this._keydown();
+         },
+          end:function () {
+              this._gameover()
+          },
+         // 创建单个字母
+         _createletter:function(){
+           var newletter=document.createElement("div");
+           newletter.className="letter";
+           do{
+           var randomnum=Math.floor(Math.random()*26+65);
+           var randomletter=String.fromCharCode(randomnum);
+           }while(this.dir[randomletter]);
+//           newletter.innerHTML=randomletter;
+             newletter.style.backgroundImage=`url(sucai/${randomletter}.png)`
+           do{
+           var randomleft=Math.random()*(this.main.offsetWidth-80);
+           }while(this._checkleft(randomleft));
+           newletter.style.left=randomleft+"px";
+           var randomtop=-Math.random()*200;
+           newletter.style.top=randomtop+"px";
+           this.main.appendChild(newletter);
+           //完成字典
+           this.dir[randomletter]={left:randomleft,top:randomtop,ele:newletter}
+         },
+         // 判断字母位置的方法
+         _checkleft:function(left){
+            for(var i in this.dir){
+               if(left>this.dir[i].left-80&&left<this.dir[i].left+80){
+                  return true;
+               }
+            }
+         },
+         _move:function(){
+          this.interval=setInterval(function(){
+               for(var i in this.dir){
+                 var t=this.dir[i].top;
+                 t+=this.speed;
+                 this.dir[i].top=t;
+                 this.dir[i].ele.style.top=t+"px";
+               if(t>this.height){
+                 this.main.removeChild(this.dir[i].ele);
+                 delete this.dir[i];
+                 this._createletter();
+                 this.life--;
+                 if(this.life<0){
+                  this._gameover();
+                  return;
+                 }
+                 this.lifeele.innerHTML=this.life;
+                 }
+               };
+            }.bind(this),50)
+         },
+         // 注册键盘事件
+         _keydown:function(){
+//         document.addEventListener("keydown",this.keydownhandler.bind(this));
+           document.onkeydown=this.keydownhandler.bind(this);
+         },
+         _gameover:function(){
+            clearInterval(this.interval);
+            alert(`最终得分为${this.scor}`);
+            this.scor=0;
+            this.scorele.innerHTML=this.scor;
+            this.life=5;
+            this.lifeele.innerHTML=this.life;
+            this.main.innerHTML="";
+            this.dir={};
+            this.state=false;
+            this.statenum=1;
+            this.guanqia.innerHTML=this.statenum;
+            this.speed=5;
+         },
+         _guoguan:function () {
+             this.statenum++;
+             this.guanqia.innerHTML=this.statenum;
+             if(this.statenum<5){
+             this._createletter();
+             }else{
+              this.speed+=5;
+             }
+         },
+         keydownhandler:function(e){
+          var kc=e.keyCode;
+          var l=String.fromCharCode(kc);
+          if(this.dir[l]){
+              this.main.removeChild(this.dir[l].ele);
+              delete this.dir[l];
+              this._createletter();
+              this.scor++;
+              this.scorele.innerHTML=this.scor;
+              if(this.scor%10==0){
+                  this._guoguan();
+              }
+          }
+         },
+         pause:function(){
+             clearInterval(this.interval);
+             document.onkeydown=null;
+         },
+         play:function(){
+             this._move();
+             this._keydown();
+         }
+      };
+      window.onload=function(){
+          var main=document.querySelector(".main");
+          var scor=document.querySelector(".scor p");
+          var life=document.querySelector(".life p");
+          var state=document.querySelector(".state p");
+          var game=new Game(main,scor,life,state);
+          var start= document.querySelector(".start");
+         start.onclick=function(){
+            if(game.state==false){
+             game.begin();
+            }
+         };
+         var pause=document.querySelector(".pause");
+         var flag=true;
+         pause.onclick=function(){
+          if(flag){
+            game.pause();
+              pause.innerHTML="继续"
+          }else{
+            game.play();
+              pause.innerHTML="暂停"
+          }
+          flag=!flag;
+         }
+          var end=document.querySelector(".end");
+          end.onclick=function(){
+                  game.end()
+              }
+
+      };
+// 改变函数的this指针
+// call apply  调用函数
+// bind  匿名函数的后面 回调函数
+    </script>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        p, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .scene {
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            background: #06c;
+        }
+
+        .main {
+            width: 800px;
+            height: 100%;
+            border: 1px solid #ccc;
+            float: left;
+            position: relative;
+        }
+
+        .control {
+            width: 200px;
+            height: 100%;
+            float: right;
+            background: #199999;
+        }
+
+        .show {
+            width: 150px;
+            margin: 30px auto;
+            text-align: center;
+
+        }
+
+        .show h3 {
+            height: 20px;
+            line-height: 20px;
+        }
+
+        .show p {
+            width: 120px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid #000;
+            background: #fff;
+            margin: 10px auto;
+            line-height: 30px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 30px;
+            margin: 30px auto;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 15px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid gold;
+        }
+        .letter {
+            width: 80px;
+            height: 80px;
+            background-size: contain;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="scene">
+    <div class="main"></div>
+    <div class="control">
+        <div class="show scor">
+            <h3>得分</h3>
+            <p>0</p>
+        </div>
+        <div class="show life">
+            <h3>生命值</h3>
+            <p>5</p>
+        </div>
+        <div class="show state">
+            <h3>关卡</h3>
+            <p>1</p>
+        </div>
+        <div class="btn start">
+            开始
+        </div>
+        <div class="btn pause">
+            暂停
+        </div>
+        <div class="btn end">
+            结束
+        </div>
+    </div>
+</div>
+</body>
+</html>

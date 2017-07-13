@@ -1,0 +1,134 @@
+html{  font-family:"微软雅黑";font-size:100px;}
+body,input{
+    margin:0;  padding:0; }
+*{ box-sizing:border-box;}
+a{ text-decoration:none; margin:0;
+    padding:0;display: block;}
+img{ padding:0; margin:0;display: block;}
+@media screen and (max-width:375px){
+    html{ font-size:50px;} }
+@media screen and (max-width:360px){
+    html{font-size:48px;} }
+@media screen and (max-width:320px){
+    html{font-size:42px;} }
+/*头部*/
+header{ width:7.50rem;height:1.40rem;
+    padding-top:0.01rem; background:#29a6dc;
+    margin:0 auto; position:relative;  }
+.header-word{  width:1.30rem;height:0.34rem;
+    line-height:0.34rem; margin:0 auto;
+    margin-top:0.60rem;text-align:center;
+    font-size:0.32rem;color:#f2f2f2;}
+.header-line{width:0.34rem;height:0.03rem;
+    margin:0 auto;margin-top:0.05rem;}
+.header-letter{  width:1.30rem;height:0.15rem;
+    line-height:0.15rem;  font-size:0.14rem;
+    text-align:center;  margin:0 auto;
+    margin-top:0.05rem; color:#9ddffd;}
+.header-a a{ width:0.44rem;
+    height:0.44rem; position:absolute;
+    top:0.68rem;right:0.25rem; }
+.header-aa a{ width:0.44rem;
+    height:0.44rem; position:absolute;
+    top:0.68rem;left:0.25rem; }
+/*内容*/
+section{ width:7.50rem;height:10.94rem;
+    background:#fafafa; margin:0 auto;
+    padding-top:0.86rem; }
+.head-img{
+    width: 1.84rem;height: 1.84rem;
+    margin: 0 auto;background-color: #ededed;
+    border-radius: 50%;padding: 0.12rem;
+    margin-bottom: 0.5rem;
+}
+.head-img img{
+    width: 1.6rem;height: 1.6rem;
+}
+.head-name{
+    width: 1.6rem;height: 0.32rem;
+    line-height: 0.32rem;text-align: center;
+    margin: 0 auto;font-size: 0.32rem;
+    color: #3a3a3a;
+}
+.head-date{
+    width: 5.10rem;height: 0.22rem;
+    margin: 0 auto;font-size: 0.22rem;
+    margin-top: 0.17rem;line-height: 0.22rem;
+}
+.head-date div{
+    float: left; color: #3a3a3a;
+}
+.head-date a{
+    float: right;
+}
+.iconfont1{
+    font-family:"iconfont" !important;
+    font-size:0.22rem;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    /*-webkit-text-stroke-width: 0.2rem;*/
+    -moz-osx-font-smoothing: grayscale;
+    color: #3a3a3a;}
+.app-content{
+    width: 7.02rem;height: 3.58rem;
+    box-shadow:0 0 0.23rem 0.02rem rgba(0, 0, 0, 0.25);border-radius: 0.10rem;
+    margin: 0 auto;margin-top: 0.3rem;
+}
+.bottom-title-image{ width:0.30rem;height:0.62rem;
+    float:left;padding-top: 0.15rem;}
+.bottom-title-word{ width:2.30rem;height:0.62rem;
+    float:left;  margin-left:0.16rem;}
+.bottom-title-word1{  width:3.30rem;height:0.37rem;
+    line-height:0.37rem; }
+.bottom-title-word11{  width:1.20rem;height:0.37rem;
+    font-size:0.26rem; color:#333333;
+    float:left; }
+.bottom-title-word1 img{ float: left;
+    margin-top: 0.25rem;}
+.bottom-title-word2{  width:2.50rem;height:0.25rem;
+    line-height:0.25rem;font-size:0.18rem;
+    color:#939393; }
+.app-content1{
+    height: 0.9rem;width: 7.02rem;
+    border-bottom: 2px #959595 dashed;
+    padding-left: 0.17rem;padding-top: 0.12rem;
+}
+.app-content a:last-child{
+    border-bottom: 0;
+}
+
+
+/*底部*/
+footer{ width:7.50rem;height:1.00rem;
+    margin: 0 auto;margin-top:0.13rem;}
+@font-face {
+    font-family: 'iconfont';  /* project id 228508 */
+    src: url('//at.alicdn.com/t/font_fh1rosc7ggrmgqfr.eot');
+    src: url('//at.alicdn.com/t/font_fh1rosc7ggrmgqfr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_fh1rosc7ggrmgqfr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_fh1rosc7ggrmgqfr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_fh1rosc7ggrmgqfr.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:0.16rem;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    /*-webkit-text-stroke-width: 0.2rem;*/
+    -moz-osx-font-smoothing: grayscale;}
+footer a{background-color:#151c2b;
+    width:2.50rem;height:1.00rem;padding-top: 0.09rem;
+    float: left;color: #67686a;}
+.footer-word1{width: 0.44rem;height:0.46rem;
+    margin: 0 auto;font-size: 0.46rem;
+}
+.footer-word2{width: 0.46rem;height: 0.32rem;
+    line-height: 0.32rem;text-align: center;
+    margin: 0 auto;font-size: 0.22rem;
+}
+footer a:hover{
+    color: #fff;
+    background:linear-gradient(to left,#0b1018 0,#151c2b 40%,#151c2b 60%,#0b1018 100%);
+}
+footer a:nth-child(2){
+    color: #fff;
+    background:linear-gradient(to left,#0b1018 0,#151c2b 40%,#151c2b 60%,#0b1018 100%);
+}

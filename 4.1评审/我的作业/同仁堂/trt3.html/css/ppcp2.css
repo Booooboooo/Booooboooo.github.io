@@ -1,0 +1,402 @@
+body,ul,ol,dl,h1,h2,h3,h4,h5,h6,p,input{padding:0;margin:0;list-style:none;}
+img{border:none;}
+a{text-decoration:none;
+    outline: none;
+    color: #555;}
+body{
+    font-size:12px;
+    font-family:"微软雅黑";
+    color:#555;
+    position: relative;
+    font-style: normal;
+    background: url(../images/bg4.jpg) fixed;
+}
+em{font-style: normal;}
+*{
+    margin: 0;padding: 0;
+    list-style: none;
+}
+/*顶部和banner*/
+.clearfix{
+    width: 998px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.top-label{
+    width: 320px;
+    height: 40px;
+    background: url(../images/arrow.png) no-repeat left center;
+    float: right;
+    padding-right: 40px;
+}
+.top-label a{
+    color: #fff;
+    padding-left: 19px;
+    padding-right: 10px;
+    line-height: 40px;
+    font-size: 13px;
+}
+.language{
+    padding: 0 10px;
+}
+.head{
+    width: 936px;
+    margin: 0 auto;
+    padding: 0 31px;
+    float: left;
+    background: url(../images/conbg.png) repeat-y;
+}
+.logo{
+    width: 250px;
+    height: 79px;
+    margin-top: 20px;
+    float: left;
+    padding-left: 15px;
+}
+.logo a{
+    outline: none;
+    color: #555;
+    text-decoration: none;
+}
+.logo img{
+    width: 199px;
+    height: 60px;
+    border: none;
+    margin: 0 auto;
+}
+.list{
+    width: 440px;
+    float: right;
+    text-align: center;
+    height: 24px;
+    padding-right: 16px;
+    margin-top: 40px;
+}
+.list ul{
+    float: left;
+    width: 290px;
+}
+.list li{
+    text-align: center;
+    height: 26px;
+    float: left;
+}
+.zi{
+    height: 22px;
+    line-height: 22px;
+    padding: 0 0 0 18px;
+    float: left;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+}
+#search-form{
+    width: 128px;
+    height: 24px;
+    float: right;
+    margin-right: 0;
+    padding-right: 4px;
+    padding-top: 2px;
+    background: url(../images/searchbg.jpg) no-repeat left;
+}
+.submit{
+    width: 20px;
+    height: 23px;
+    border: none;
+    background: url(../images/search.jpg) no-repeat left center;
+    cursor: pointer;
+    float: right;
+}
+.say{
+    width: 90px;
+    border: none;
+    padding: 2px 0 0 7px;
+    line-height: 20px;
+    height: 20px;
+    background: none;
+    color: #8d8d8d;
+    float: left;
+}
+.effect1{
+    width: 936px;
+    height: 300px;
+    background: url(../images/bannerbg.jpg) no-repeat bottom center;
+    float: left;
+    position: relative;
+}
+.slides{
+    height: 490px;
+    position: relative;
+    overflow: hidden;
+}
+.menu{
+    width: 930px;
+    height: 53px;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.menu ul{
+    float: left;
+    width: 98%;
+    margin-top: 13px;
+    padding-left: 18px;
+}
+.menu li{
+    height: 37px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: 180px;
+}
+.menu a{
+    height: 37px;
+    line-height: 37px;
+    display: block;
+    font-size: 16px;
+    width: 140px;
+    padding: 0 0 0 40px;
+    float: left;
+    color: #000;
+    background: url(../images/menu.png) no-repeat;
+}
+.n1 a{
+    background: url(../images/menu01.png) no-repeat;
+}
+.n5 a{
+    background: url(../images/menu05.png) no-repeat;
+}
+.n1>a:hover{
+    background: url(../images/m1.png) no-repeat;
+}
+.n2>a:hover{
+    background: url(../images/m2.png) no-repeat;
+}
+.n3>a:hover{
+    background: url(../images/m3.png) no-repeat;
+}
+.n4>a:hover{
+    background: url(../images/m4.png) no-repeat;
+}
+.n5>a:hover{
+    background: url(../images/m5.png) no-repeat;
+}
+
+/*中间*/
+#container{
+    overflow: hidden;
+    padding: 0 31px;
+    padding-top: 3px;
+    width: 936px;
+    margin: 0 auto;
+    background: url(../images/conbg.png) repeat-y;
+}
+.con-title{
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    line-height: 28px;
+    margin: 0 auto;
+    width: 900px;
+    margin-bottom: 2px;
+}
+.con-title span{
+    font-size: 18px;
+    float: left;
+    color: #eeb418;
+    height: 29px;
+    border-bottom: 2px solid #c09305;
+}
+#pro-banner{
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+}
+#pro-banner .imagebg{
+    height: 430px;
+    overflow: hidden;
+    position: relative;
+}
+.bannerbg{
+    height: 430px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+.bannerbg:nth-child(2){
+    display: block;
+}
+.bannerbg-main{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 430px;
+    cursor: pointer;
+}
+.banner1{
+    background: url(../images/b11.jpg) center no-repeat;
+}
+.banner2{
+    background: url(../images/b21.jpg) center no-repeat;
+}
+.banner3{
+    background: url(../images/b31.jpg) center no-repeat;
+}
+.banner4{
+    background: url(../images/b41.jpg) center no-repeat;
+}
+.banner5{
+    background: url(../images/b51.jpg) center no-repeat;
+}
+.banner6{
+    background: url(../images/b6.jpg) center no-repeat;
+}
+.banner7{
+    background: url(../images/b7.jpg) center no-repeat;
+}
+.banner8{
+    background: url(../images/b8.jpg) center no-repeat;
+}
+.banner9{
+    background: url(../images/b9.jpg) center no-repeat;
+}
+.banner10{
+    background: url(../images/b10.jpg) center no-repeat;
+}
+.banner11{
+    background: url(../images/b11.jpg) center no-repeat;
+}
+.banner12{
+    background: url(../images/b12.jpg) center no-repeat;
+}
+.scroll{
+    margin: 0 auto;
+    width: 600px;
+    height: 100px;
+    position: relative;
+}
+.current{
+    outline: 1px solid #fb823b;
+}
+.outScroll-pic{
+    width: 468px;
+    height: 90px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.scroll-pic{
+    width: 1482px;
+    height: 90px;
+    position: absolute;
+    left: -78px;
+    transition:all  0.6s;
+}
+.scroll-pic li{
+    width: 58px;
+    height: 58px;
+    float: left;
+    background: url(../images/pbg1.jpg) no-repeat;
+    margin: 5px 10px 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+.scroll-pic li img{
+    opacity: 1;
+    width: 48px;
+    height: 48px;
+    float: left;
+    display: block;
+    padding: 4px 0 0 4px;
+    border: none;
+    margin: 0 auto;
+}
+.currently p{
+    color: #e8ab08;
+}
+.outScroll-pic p{
+    width: 80px;
+    z-index: 999;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: -10px;
+    top: 63px;
+}
+.prev{
+    width: 33px;
+    height: 60px;
+    display: block;
+    background: url(../images/left.jpg) no-repeat left center;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+.next{
+    width: 33px;
+    height: 60px;
+    display: block;
+    background: url(../images/right.jpg) no-repeat left center;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+
+/*底部*/
+footer  {
+    height: 60px;
+    margin: 0 auto;
+    width: 936px;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+/*导航下拉菜单*/
+.yincang{
+    display: none;
+    top: 37px;
+    z-index: 9999;
+    width: 177px;
+    position: absolute;
+    padding-top: 0;
+}
+.yincang ul{
+    width: 177px;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.yincang ul li{
+    height: 33px;
+    width: 177px;
+    margin: 0;
+    background: none;
+}
+.yincang ul li a{
+    width: 138px;
+    padding: 0 0 0 40px;
+    height: 33px;
+    line-height: 33px;
+    background: url(../images/menuline.png) repeat-x 0 0;
+}
+
+.n1 .yincang ul li{
+    width: 173px;
+}
+.n1 .yincang ul li a{
+    width: 133px;
+    padding: 0 0 0 40px;
+}
+
+
+
+

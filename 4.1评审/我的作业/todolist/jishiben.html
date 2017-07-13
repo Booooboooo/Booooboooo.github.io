@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <script src="jishiben.js"></script>
+    <style>
+        @font-face {
+            font-family: 'iconfont';  /* project id 259310 */
+            src: url('https://at.alicdn.com/t/font_pvs9xzot78tfn7b9.eot');
+            src: url('https://at.alicdn.com/t/font_pvs9xzot78tfn7b9.eot?#iefix') format('embedded-opentype'),
+            url('https://at.alicdn.com/t/font_pvs9xzot78tfn7b9.woff') format('woff'),
+            url('https://at.alicdn.com/t/font_pvs9xzot78tfn7b9.ttf') format('truetype'),
+            url('https://at.alicdn.com/t/font_pvs9xzot78tfn7b9.svg#iconfont') format('svg');
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+        }
+        input,h1,ul,li,h2{
+            padding: 0;margin: 0;list-style: none;
+            border: none;
+        }
+        body{
+            display: flex;
+
+            flex-direction: column;
+        }
+        h1{
+            width: 100%;height: 50px;
+            background:black;
+            font-size: 20px;line-height: 50px;
+            padding-left: 30px;
+            color:white;
+            font-family: "Monotype Corsiva";
+        }
+        .box{
+            width:100%;height: 50px;
+            background:darkcyan;
+        }
+        #nr{
+            width:40%;height: 46px;
+            padding-left: 30px;margin-top: 2px;
+            float: left;
+        }
+        #nr2{
+            width: 60px;height: 50px;
+            font-size: 16px;color: #000;
+            line-height: 50px;text-align: center;
+            background: orange;float: left;
+        }
+        .main{
+            width: 100%;
+            height: auto;
+            flex-grow: 1;
+            background: #ccc;
+        }
+        ul{
+            overflow: auto;
+        }
+        .plan{
+            width: 50%;height: 537px;
+            background:darkmagenta;
+            float: left;overflow: auto;
+            padding: 40px;position: relative;
+        }
+        .done{
+            width: 50%;height: 537px;
+            background:green;
+            float: left;overflow: auto;
+            padding: 40px;position: relative;
+        }
+        .count{
+            width: 600px;height: 30px;
+            float: left;
+            color: red;
+        }
+        .count h2{
+            width: 500px;height: 30px;
+            float: left;
+            color: #000;
+        font-family: 幼圆;
+        }
+        .neirong{
+            display: block;
+            background: blue;
+            position: relative;
+        }
+        .neirong2{
+            display: block;
+            background: blue;
+            position: relative;
+        }
+        .star{
+            font-family: iconfont;
+            float: right;color: #fff;
+            cursor: pointer;
+            /*position: absolute;*/
+            /*top:10px;  left:600px;*/
+        }
+        .active{
+            font-family: iconfont;
+            color: red;
+            float: right;
+            cursor: pointer;
+            background: #ccc;
+            /*position: absolute;*/
+            /*top:10px;  left:600px;*/
+        }
+        .neirong input{
+            width: 20px;height: 100px;
+            float: left;
+        }
+        .neirong p{
+            width: 500px;height: auto;
+            float: left;
+            background: #f8f8f8;
+            border: 1px solid #a5ffac;
+        }
+        .neirong time{
+            float: right;
+        }
+        .neirong2 input{
+            width: 20px;height: 100px;
+            float: left;
+        }
+        .neirong2 p{
+            width: 500px;height: auto;
+            float: left;background: #f8f8f8;
+            border: 1px solid #a5ffac;
+
+        }
+        .neirong2 time{
+            float: right;display: block;
+        }
+        .gengxin{
+            width: 50px;height: 50px;
+            border-radius: 50%;
+            background: #19ff07;
+            position: absolute;
+            bottom:50px;left:300px;cursor: pointer;
+            line-height: 50px;text-align: center;
+        }
+        .qingchu{
+            width: 50px;height: 50px;
+            border-radius: 50%;
+            background: #ff13b0;
+            position: absolute;
+            bottom:50px;left:1000px;cursor: pointer;
+            line-height: 50px;text-align: center;
+        }
+        .sss{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<h1>TODO&nbsp;&nbsp; LIST</h1>
+
+<div class="box">
+    <input type="text" id="nr">
+    <input type="button" value="提&nbsp;&nbsp;交" id="nr2">
+</div>
+
+<div class="main">
+       <ul class="plan">
+           <div class="count"><h2>未完成</h2>总计1条</div>
+           <div class="neirong">
+               <input type="checkbox">
+               <p contenteditable="true"></p>
+               <time>2017/3/21 16:45</time>
+               <div class="star">&#xe614;</div>
+           </div>
+       </ul>
+    <ul class="done">
+        <div class="count"><h2>已完成</h2>总计1条</div>
+        <div class="neirong2">
+            <input type="checkbox">
+            <p contenteditable="true"></p>
+            <time>2017/3/21 16:45</time>
+            <div class="star">&#xe614;</div>
+        </div>
+    </ul>
+    <div class="gengxin">更新</div>
+    <div class="qingchu">清除</div>
+</div>
+</body>
+</html>

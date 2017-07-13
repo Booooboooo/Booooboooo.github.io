@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        canvas{
+            background: #ccc;
+            display:block;
+            margin: 0 auto;
+            /*canvas.style.cursor= url(eraser.jpg),default;*/
+        }
+        .control{
+            width: 100%;height: 50px;
+            background: #84e9ff;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        span{
+            float: left;
+        }
+        input{
+            float: left;
+           margin-top: 13px;
+        }
+        .control>lable{
+            width: 150px;height: 50px;
+            background: #43c3ff;font-size: 14px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+        #bianshu{
+            width: 50px;
+        }
+        #width{
+            width: 50px;
+        }
+        .cx-2{
+            width: 180px;height: 50px;
+            background: #43c3ff;font-size: 14px;
+            line-height: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+<div class="control">
+
+    <lable>
+        <span>选择功能：</span>
+    <select id="shape" >
+        <option value="pen">铅笔</option>
+        <option value="line">直线</option>
+        <option value="rect">矩形</option>
+        <option value="circle">圆</option>
+        <option value="poly">多边形</option>
+        <option value="eraser">橡皮擦</option>
+    </select>
+    </lable>
+
+    <lable>
+        <span>选择样式：</span>
+    <select id="xz" >
+        <option value="stroke">描边</option>
+        <option value="fill">填充</option>
+    </select>
+    </lable>
+
+    <lable >
+        <span>画笔颜色：</span>
+        <input type="color" class="color">
+    </lable>
+
+    <lable >
+        <span>画板颜色：</span>
+        <input type="color" class="bgcolor">
+    </lable>
+
+    <lable class="bs">
+        <span>选择边数：</span>
+        <input type="number" value="3" min="3" max="20"
+        id="bianshu">
+    </lable>
+
+<lable class="cx">
+    <span>画笔粗细：</span>
+    <input type="number" value="1" min="1" max="20" id="width">
+</lable>
+
+    <div class="cx-2">
+        <div class="back"><input type="button" value="撤销"></div>
+        <div class="reWrite"><input type="button" value="重绘"></div>
+        <div class="save"><input type="button" value="保存" class="save"></div>
+    </div>
+
+</div>
+<canvas id="c1" width="1100" height="800"></canvas>
+</body>
+<script src="hb.js"></script>
+<script>
+    var canvas=document.querySelector("#c1");
+    var cobj=canvas.getContext("2d");
+    var bgcolor=document.querySelector(".bgcolor");
+    var shape=document.querySelector("#shape");
+    var style=document.querySelector("#xz");
+    var color=document.querySelector(".color");
+    var width=document.querySelector("#width");
+    var side=document.querySelector("#bianshu");
+    var back=document.querySelector(".back");
+    var save2=document.querySelector(".save");
+    var reWrite=document.querySelector(".reWrite");
+//    console.log(rect);
+    var canvasHistory=[];
+    //功能
+    var type="pen";
+    shape.onchange=function () {
+        type=shape.value;
+        if(type=="eraser"){
+            canvas.style.cursor= "url(eraser.png),default";
+        }else if(type=="pen"){
+            canvas.style.cursor= "url(pen.png),default"
+        }else if(type=="line"){
+            canvas.style.cursor= "url(line.png),default"
+        }else{
+            canvas.style.cursor= "url(shizi.png),default";
+        }
+    }
+    //样式
+    var st="stroke";
+    style.onchange=function () {
+        st=style.value;
+    }
+    //画笔颜色
+    var co="#000";
+    color.onchange=function () {
+        co=color.value;
+    }
+    //线宽
+    var wi="1";
+    width.onchange=function () {
+        wi=width.value;
+    }
+    //画板背景颜色
+    bgcolor.onchange=function () {
+        canvas.style.background=bgcolor.value;
+    }
+    //多边形边数
+    var s=3;
+    side.onchange=function () {
+        s=side.value;
+    }
+
+canvas.onmousedown=function (e) {
+    var sx = e.offsetX;
+    var sy = e.offsetY;
+    var draw=new Draw(cobj,{st,co,wi});
+    if(shape.value=="pen"){
+        cobj.beginPath();
+        cobj.moveTo(sx,sy);
+    };
+    if(shape.value=="eraser"){
+        draw.eraser(sx,sy,sx,sy);
+
+    };
+    canvas.onmousemove = function (e) {
+        var ox = e.offsetX;
+        var oy = e.offsetY;
+
+    if(type!=="eraser"){
+        cobj.clearRect(0,0,1100,800);
+        if(canvasHistory.length>0) {
+            cobj.putImageData(canvasHistory[canvasHistory.length-1], 0, 0, 0, 0, 1100, 800);
+        }
+    }
+        draw[type](sx,sy,ox,oy,s);
+    };
+    canvas.onmouseup=function () {
+
+        var imagedata=cobj.getImageData(0,0,1100,800);
+        canvasHistory.push(imagedata);
+        canvas.onmousemove=null;
+        canvas.onmouseup=null;
+    };
+};
+//撤销
+back.onclick=function () {
+    canvasHistory.pop();
+    cobj.clearRect(0,0,1100,800);
+    if(canvasHistory.length==0) {
+      alert("已没有内容可撤销");
+    }
+    cobj.putImageData(canvasHistory[canvasHistory.length - 1], 0, 0, 0, 0, 1100, 800);
+};
+//保存
+    save2.onclick=function () {
+      var url=canvas.toDataURL("image/png");
+        location.href=url;
+    };
+//重绘
+    reWrite.onclick=function () {
+        cobj.clearRect(0,0,1100,800);
+        cobj.save();
+    }
+
+
+</script>
+</html>

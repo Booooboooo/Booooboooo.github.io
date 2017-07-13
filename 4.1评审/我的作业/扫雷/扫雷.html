@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+       $(function () {
+         do{
+           $(".scene").empty();
+           for(var i=0;i<10;i++){
+               for(var j=0;j<10;j++){
+                  var lei=Math.random()>0.85;
+                  $("<div></div>").addClass(
+                          function () {
+                            if(lei){
+                                return "block lei";
+                            }else{
+                                return "block";
+                            }
+                  })
+                          .attr("id",i+"-"+j)
+                          .data("pos",{x:i,y:j})
+                          .mousedown(mousedownHandler)
+                          .appendTo(".scene");
+               }
+           }
+         }while($(".lei").length!=15)
+
+
+           function mousedownHandler(e) {
+               if(e.which==1){
+                   leftclick.call(this);
+               }else if(e.which==3){
+                   rightclick.call(this);
+               }
+           }
+
+           var nn=15;
+           function rightclick() {
+               if($(this).hasClass("num")){
+                   return;
+               }
+               if(!$(this).hasClass("flag")){
+                   $(this).addClass("flag");
+                   nn--;
+                   if(nn==0){
+                       if($(".lei").filter(".flag").length==15){
+                           $(".block").not(".lei").addClass("num");
+                           alert("游戏成功");
+                       }
+                   }
+               }else{
+                   $(this).removeClass("flag");
+                   nn++;
+               }
+               $(".flagnum").text(nn);
+           }
+
+           function leftclick() {
+                 if($(this).hasClass("lei")){
+                     $(".lei").addClass("show");
+                 }else if($(this).hasClass("flag")){
+                     return;
+                 }else{
+                     var pos = $(this).data("pos");
+                     var n=0;
+//                     if($("#"+(pos.x-1)+"-"+(pos.y-1)).hasClass("lei")){
+//                         n++;
+//                     }
+                     for(var i=pos.x-1;i<=pos.x+1;i++){
+                         for(var j=pos.y-1;j<=pos.y+1;j++){
+                             if($("#"+i+"-"+j).hasClass("lei")){
+                                 n++;
+                             }
+                         }
+                     }
+                     $(this).text(n).addClass("num");
+                     if(n==0){
+                         for(var i=pos.x-1;i<=pos.x+1;i++){
+                             for(var j=pos.y-1;j<=pos.y+1;j++){
+                                 var obj=$("#"+i+"-"+j);
+                                 if(obj.length!=0){
+                                     if(!obj.data("clicked")){
+                                      obj.data("clicked",true);
+                                      leftclick.call(obj)
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                 }
+           }
+
+
+           $(document).on("contextmenu",function (e) {
+               e.preventDefault();    //阻止浏览器默认行为
+           })
+
+
+
+
+           //end
+       })
+    </script>
+    <style>
+        body{
+            position: relative;
+        }
+        .scene{
+            width: 500px;height: 500px;
+            border-left: 1px solid #000;
+            border-top:1px solid #000;
+            margin: 0 auto;
+        }
+        .block{
+            width: 49px;height: 49px;
+            border-bottom: 1px solid #000;
+            border-right:1px solid #000;
+            float: left;
+            background: #ccc;
+        }
+        .show{
+            background: url("1.png");
+            background-size: contain;
+        }
+        .num{
+            line-height: 49px;
+            text-align: center;
+            background:greenyellow;
+        }
+        .flag{
+            background:red;
+        }
+        .flagnum{
+            width: 100px;height: 100px;
+            border: 3px solid red;
+            background:#ccc;text-align: center;
+            line-height: 100px;font-size: 20px;
+            position: absolute;
+            top:200px;left: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="scene"></div>
+<div class="flagnum">15</div>
+</body>
+</html>

@@ -1,0 +1,278 @@
+@import url(1.css);
+p,h1,h2,h3,h4,h5,h6,pre,input,dd,ul,dt,dl,ol,figure,body,input,article{
+    margin: 0;padding: 0;list-style: none;border: none;}
+img{border: none;display: block;margin: 0;padding: 0;}
+input,a{text-decoration: none;}
+body{/*font-size: 12px;*//*font-family:"Helvetica Neue","Helvetica";*/
+background: #f1f1f1;position: relative;}
+*{box-sizing: border-box;}
+/*顶部*/
+.top{
+     width: 100%;height: 1.4rem;
+     background: #29a6dc;padding-top:0.48rem;
+     position: relative; 
+ }
+ .daohangkuang{
+    width: 5.71rem;height: 0.84rem;
+    margin: 0 auto;border-radius: 0.42rem;
+    background: #2a3441;position: relative;
+ }
+ .jingxuan{
+    width: 1.65rem;height: 0.7rem;border-radius: 0.35rem;
+    margin-left: 0.11rem;margin-top: 0.07rem;padding-top: 0.16rem;
+    background: #2a3441;float: left;
+    position: relative;margin-right: 0.18rem;
+ }
+ .jingxuanzi{
+    width: 0.64rem;height: 0.22rem;margin: 0 auto;
+    font-size: 0.22rem;line-height: 0.22rem;
+    text-align: center;color: #ffffff;margin-bottom: 0.04rem;
+ }
+ .jxyingwen{
+    width: 0.7rem;height: 0.22rem;margin: 0 auto;
+    font-size: 0.1rem;text-align: center;color: #bddbe8;
+ }
+ .kuai1{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top:0.3rem;left: 0.32rem;
+ }
+ .kuai2{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top:0.3rem;left: 0.37rem;
+ }
+ .kuai3{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top:0.3rem;right: 0.34rem;
+ }
+ .kuai4{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top:0.3rem;right: 0.28rem;
+ }
+ .gun{
+    width: 0.01rem;height: 0.56rem;margin-top: 0.14rem;
+    background: #fff;float: left;
+ }
+ .kuai5{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top: 0.12rem;left: 1.93rem;
+ }
+ .kuai6{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top: 0.68rem;left: 1.93rem;
+ }
+ .bangdan{
+    width: 1.65rem;height: 0.7rem;border-radius: 0.35rem;
+    margin-left: 0.11rem;margin-top: 0.07rem;padding-top: 0.16rem;
+    background: #2a3441;float: left;
+    position: relative;margin-right: 0.16rem;
+
+ }
+ .bangdanzi{
+    width: 0.64rem;height: 0.22rem;margin: 0 auto;
+    font-size: 0.22rem;line-height: 0.22rem;
+    text-align: center;color: #ffffff;margin-bottom: 0.04rem;
+ }
+ .bangdanzi3{
+    width: 0.64rem;height: 0.22rem;margin: 0 auto;
+    font-size: 0.22rem;line-height: 0.22rem;margin-top: 0.19rem;
+    text-align: center;color: #ffffff;margin-bottom: 0.04rem;
+ }
+ .bangdanzi2{
+    width: 0.7rem;height: 0.22rem;margin: 0 auto;
+    font-size: 0.1rem;text-align: center;color: #bddbe8;
+ }
+ .kuai7{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top: 0.12rem;left: 3.86rem;
+ }
+ .kuai8{
+    width: 0.03rem;height: 0.03rem;
+    background: #fff;
+    position: absolute;top: 0.68rem;left: 3.86rem;
+ }
+ .bangdan2{
+    
+    width: 1.65rem;height: 0.7rem;border-radius: 0.35rem;
+    margin-left: 0.11rem;margin-top: 0.07rem; 
+    background: #29a6dc;float: left;border: 0.02rem solid #fff;
+    position: relative;
+ }
+ .sousuotubiao{
+    width: 0.44rem;height: 0.44rem;
+    background: url(../images/1.png) no-repeat;
+    background-size: cover;
+    position: absolute;top: 0.68rem;right: 0.24rem;
+ }
+ /*中部内容*/
+.wangluokuang{
+    width: 100%;height: 0.6rem;
+    background: #ace1f8;float: left;
+    box-shadow: 0.1rem 0.1rem #000 0.3rem;
+}
+.shujitu{
+    width: 0.38rem;height: 0.33rem;
+    background: url(../images/2.png) no-repeat;
+    background-size: cover;float: left;
+    margin-top: 0.14rem;margin-left: 0.38rem;
+}
+.shujiwenzi{
+    width:1rem;height: 0.2rem;
+    font-size: 0.2rem;color: #666666;
+    float: left;margin-top: 0.21rem;
+    line-height: 0.2rem;margin-left: 0.04rem;
+}
+.womanbox{
+    width: 100%;height: 1.95rem;
+    float: left;
+    position: relative;
+}
+.zhuanqu{
+    width: 1.3rem;height: 0.26rem;
+    color: #29a6dc;font-size: 0.26rem;
+    margin-left: 0.48rem;margin-top: 0.32rem;
+    line-height: 0.26rem;
+}
+.zhuanqu2{
+    width: 1.3rem;height: 0.26rem;
+    color: #29a6dc;font-size: 0.26rem;
+    margin-left: 0.48rem;margin-top: 0.66rem;
+    line-height: 0.26rem;
+}
+.dian{
+    width: 0.04rem;height: 0.04rem;
+    border-radius: 0.02rem;background: #29a6dc;
+    position: absolute;top: 0.43rem;left:0.38rem;
+}
+.dian21{
+    width: 0.04rem;height: 0.04rem;
+    border-radius: 0.02rem;background: #29a6dc;
+    position: absolute;top: 0.78rem;left:0.38rem;
+}
+.fengexian{
+    width: 6.1rem;height: 0.02rem;
+    background: url(../images/3.png) no-repeat;
+    background-size: cover;margin:0 auto;margin-top: 0.2rem; 
+}
+.fenlei{
+    width: 2.03rem;height: 0.88rem;
+    background: #29a5db;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;margin-left: 0.46rem;
+    margin-top:0.28rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.fenlei2{
+    width: 2.03rem;height: 0.88rem;
+    background: #53c2f2;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;
+    margin-top:0.28rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.fenlei22{
+    width: 2.03rem;height: 0.88rem;
+    background: #29a5db;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;
+    margin-top:0.28rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.dian2{
+    width: 0.06rem;height: 0.06rem;
+    border-radius: 0.03rem;
+    background: #fff;
+    position: absolute;top: 0.04rem;left: 0.04rem;
+}
+.fangbox{
+    width: 0.16rem;height:0.16rem;
+    background: linear-gradient (to top right, #53c2f2,#fff);
+    position: absolute;top: 0;right: 0;
+}
+.box-two{
+    width: 100%;height: 1.35rem;
+    float: left;
+}
+.fenlei3{
+    width: 2.03rem;height: 0.88rem;
+    background: #53c2f2;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;margin-left: 0.46rem;
+    margin-top:0.47rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.fenlei4{
+    width: 2.03rem;height: 0.88rem;
+    background: #29a5db;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;
+    margin-top:0.47rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.fenlei5{
+    width: 2.03rem;height: 0.88rem;
+    background: #53c2f2;color: #fff;
+    font-size: 0.3rem;line-height: 0.88rem;
+    text-align: center;
+    margin-top:0.47rem;position: relative;
+    margin-right: 0.25rem; float: left;
+}
+.manbox{
+    width: 100%;height: 2.3rem;
+    float: left;
+    position: relative;
+}
+.box-two2{
+    width: 100%;height: 1.35rem;
+    float: left;margin-bottom: 0.35rem;
+}
+.black-box{
+    width: 100%;height: 1.01rem;
+    background: #dfdfdf;float: left;
+}
+ /*底部内容*/
+ .bottom{
+    width:100%;height: 1rem;
+    background: #151c2b;float: left;
+ }
+ .shujia2{
+    width: 2.5rem;height: 0.95rem;border-right: 0.01rem solid #717171;
+    margin-top: 0.02rem;float: left;
+ }
+ .shujiatu{
+    width: 0.46rem;height: 0.44rem;
+    background: url(../images/7.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }
+ .shujiazi{
+    width:0.48rem;height: 0.3rem;font-size: 0.22rem;
+    line-height: center;color: #646567;margin: 0 auto; margin-top: 0.1rem;
+ }
+ .shuchengtu{
+    width: 0.44rem;height: 0.44rem;
+    background: url(../images/8.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }
+ .shujia2  .shuchengzi{
+    width:0.48rem;height: 0.30rem;text-align: 0.44rem;font-size: 0.22rem;
+    line-height: center;color: #fff;margin: 0 auto; margin-top: 0.1rem;
+ }
+ .shujia22{
+    width: 2.5rem;height: 0.95rem;
+    margin-top: 0.02rem;float: left;
+ }
+ .shujia22 .wodezi{
+    width:0.48rem;height: 0.30rem;text-align: 0.44rem;font-size: 0.22rem;
+    line-height: center;color: #67686a;margin: 0 auto; margin-top: 0.08rem;
+ }
+ .wodetu{
+    width: 0.44rem;height: 0.46rem;
+    background: url(../images/9.png) no-repeat center;
+    background-size: cover;margin-top: 0.07rem;margin-left: 1.02rem;
+ }

@@ -1,0 +1,91 @@
+html{  font-family:"微软雅黑";font-size:100px;  }
+body,input{
+    margin:0;  padding:0; }
+*{ box-sizing:border-box;}
+a{ text-decoration:none; margin:0;
+    padding:0;display: block;}
+img{ padding:0; margin:0;display: block;}
+@media screen and (max-width:375px){
+    html{ font-size:50px;} }
+@media screen and (max-width:360px){
+    html{font-size:48px;} }
+@media screen and (max-width:320px){
+    html{font-size:42px;} }
+
+section{
+    width: 7.5rem;height: 13.34rem;
+    margin: 0 auto;
+    background-image: url("../image/1.jpg");
+    padding-top: 3.2rem;
+}
+.content{
+    width: 4.78rem;height: 5.61rem;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+    background-color: #ffffff;
+    overflow:hidden;
+}
+.title{
+    width: 4.78rem;height: 0.82rem;
+    background-color: #29dcbc;
+    padding-left: 0.54rem;padding-top: 0.10rem;
+}
+.bottom-title-image{ width:0.36rem;height:0.62rem;
+    float:left;padding-top: 0.15rem;}
+.bottom-title-word{ width:2.30rem;height:0.62rem;
+    float:left;  margin-left:0.16rem;}
+.bottom-title-word1{  width:4.30rem;height:0.37rem;
+    line-height:0.37rem; }
+.bottom-title-word11{  width:3.20rem;height:0.37rem;
+    font-size:0.22rem; color:#fff;
+    float:left; }
+.bottom-title-word1 img{ float: left;
+    margin-top: 0.25rem;}
+.bottom-title-word2{  width:3.50rem;height:0.25rem;
+    line-height:0.25rem;font-size:0.16rem;
+    color:#fff; }
+
+.content-c>div:nth-child(4){
+    margin-bottom: 0.42rem;
+}
+.content-c-word{ width:2.30rem;height:0.62rem;
+    float:left;}
+.content-c-word1{  width:3.30rem;height:0.37rem;
+    line-height:0.37rem; }
+.content-c-word11{  width:3.20rem;height:0.37rem;
+    font-size:0.24rem; color:#333333;
+    float:left; }
+.content-c-word2{  width:3.50rem;height:0.25rem;
+    line-height:0.25rem;font-size:0.18rem;
+    color:#939393; }
+.app-content1{
+    height: 0.84rem;width: 4.34rem;
+    margin: 0 auto;
+    border-bottom: 2px #959595 dashed;
+    padding-left: 0.17rem;padding-top: 0.12rem;
+}
+.app-content1>span{
+    height: 0.84rem;
+    display: block;
+    float: right;
+}
+#radio{
+    width: 0.3rem;height: 0.3rem;
+    display: block;margin-top: 0.26rem;
+}
+.content-button1{
+    width:1.95rem;height:0.58rem;
+    overflow:hidden;float: left;
+    position:relative;margin-left: 0.28rem;
+}
+
+#button{width:1.95rem;height:0.58rem;
+    background:#28dd8b;
+    border-radius:0.34rem;border:none;
+    font-size:0.26rem; color:#fff;
+    cursor:pointer;display:block;}
+.content-button2{
+    width:1.95rem;height:0.58rem;
+    overflow:hidden;float: right;
+    position:relative;margin-right: 0.28rem;
+}
